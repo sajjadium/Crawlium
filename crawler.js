@@ -25,7 +25,8 @@ function parseArguments() {
       [ '-s', '--site' ],
       {
         action: 'store',
-        required: true
+        required: true,
+        help: 'Domain (e.g., google.com)'
       }
     );
     parser.addArgument(
@@ -33,21 +34,24 @@ function parseArguments() {
       {
         action: 'store',
         type: 'int',
-        required: true
+        required: true,
+        help: 'Number of URLs'
       }
     );
     parser.addArgument(
       [ '-c', '--cookies' ],
       {
         action: 'store',
-        defaultValue: null
+        defaultValue: null,
+        help: 'A JSON file that contains cookies'
       }
     );
     parser.addArgument(
       '--headless',
       {
         action: 'storeTrue',
-        defaultValue: false
+        defaultValue: false,
+        help: 'Using headless mode in servers'
       }
     );
 

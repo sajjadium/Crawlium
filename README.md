@@ -9,7 +9,7 @@ npm install chrome-launcher chrome-remote-interface url-parse util tldjs path sh
 # Crawling
 
 ``` sh
-node crawler.js --site DOMAIN --number NUM [--cookies FILENAME] [--headless] > output.logs
+node crawler.js --site DOMAIN --number NUM_URLS [--cookies FILENAME] [--headless] > output.logs
 ```
 
 The cookie filename is an optional JSON file, which can be extracted from `output.logs`.
