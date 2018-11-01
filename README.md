@@ -4,7 +4,7 @@ A website can include resources in an HTML document from any origin so long as t
 
 Instead, in this work we define an **`Inclusion Tree`** abstraction extracted directly from the browser's resource loading code. Unlike a DOM tree, the inclusion tree represents how different resources are included in a web page that is invariant with respect to run-time DOM updates. It also discards irrelevant portions of the DOM tree that do not reference remote content. For each resource in the inclusion tree, there is an **`Inclusion Sequence (Chain)`** that begins with the root resource (i.e., the URL of the web page) and terminates with the corresponding resource. Furthermore, browser extensions can also manipulate the web page by injecting and executing JavaScript code in the page's context. Hence, the injected JavaScript is considered a direct child of the root node in the inclusion tree. An example of a DOM tree and its corresponding inclusion tree is shown in Figure~\ref{inclusion:fig:dom_inclusion_tree}. As shown in Figure~\ref{inclusion:fig:dom_inclusion_tree}b, **`f.org/flash.swf`** has been dynamically added by an **`inline script`** to the DOM tree, and its corresponding **`inclusion sequence (chain)`** has a length of 4 since we remove the **`inline`** resources from **`inclusion sequence (chain)`**. Moreover, **`ext-id/script.js`** is injected by an extension as the direct child of the root resource. This script then included **`g.com/script.js`**, which in turn included **`h.org/img.jpg`**.
 
-![asdfasdf](dom_inclusion_tree.pdf)
+![](dom_inclusion_tree.png)
 
 # Prerequisites
 
