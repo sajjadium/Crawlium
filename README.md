@@ -6,6 +6,10 @@ Instead, in this work we define an **`Inclusion Tree`** abstraction extracted di
 
 ![](dom_inclusion_tree.png)
 
+# Design
+
+Our crawler is built by using the **`Chrome Debugging Protocol (CDP)`**. CDP provides programmatic access to the browser and allows clients to attach to open windows, inspect network traffic, and interact with the JavaScript environment and the DOM tree loaded in the window.
+
 # Prerequisites
 
 Install `NodeJS` from https://nodejs.org/en/download/. Then, run the following command to install the dependencies:
@@ -14,7 +18,7 @@ Install `NodeJS` from https://nodejs.org/en/download/. Then, run the following c
 npm install chrome-launcher chrome-remote-interface url-parse util tldjs path shuffle-array argparse
 ```
 
-# Crawling
+# Data Collection
 
 ``` sh
 node crawler.js --site DOMAIN --number NUM_URLS [--cookies FILENAME] [--headless] > output.logs
@@ -22,7 +26,7 @@ node crawler.js --site DOMAIN --number NUM_URLS [--cookies FILENAME] [--headless
 
 The cookie filename is an optional JSON file, which can be extracted from `output.logs`.
 
-# Inclusion Tree
+# Extracting Inclusion Tree
 
 ``` sh
 ./inclusion_tree.py output.logs > output.json
