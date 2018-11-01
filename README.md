@@ -26,6 +26,16 @@ The cookie filename is an optional JSON file, which can be extracted from `outpu
 ./inclusion_tree.py output.logs > output.json
 ```
 
-# Reference
+# References
 
-[1] **Sajjad Arshad**, Amin Kharraz, William Robertson, "**Include Me Out: In-Browser Detection of Malicious Third-Party Content Inclusions**",  International Conference on Financial Cryptography and Data Security (**FC**), **2016**.
+[1] **Sajjad Arshad**, Amin Kharraz, William Robertson, "**Include Me Out: In-Browser Detection of Malicious Third-Party Content Inclusions**", International Conference on Financial Cryptography and Data Security (**FC**), **2016**.
+
+[2] Muhammad Ahmad Bashir, **Sajjad Arshad**, William Robertson, Christo Wilson, "**Tracing Information Flows Between Ad Exchanges Using Retargeted Ads**", **USENIX Security** Symposium, **2016**.
+
+[3] **Sajjad Arshad**, Amin Kharraz, William Robertson, "**Identifying Extension-based Ad Injection via Fine-grained Web Content Provenance**", International Symposium on Research in Attacks, Intrusions and Defenses (**RAID**), **2016**.
+
+[4] Muhammad Ahmad Bashir, **Sajjad Arshad**, Christo Wilson, "**Recommended For You: A First Look at Content Recommendation Networks**", ACM Internet Measurement Conference (**IMC**), **2016**.
+
+[5] Tobias Lauinger, Abdelberi Chaabane, **Sajjad Arshad**, William Robertson, Christo Wilson, Engin Kirda, "**Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web**", Network and Distributed System Security Symposium (**NDSS**), **2017**.
+
+[6] Muhammad Ahmad Bashir, **Sajjad Arshad**, Engin Kirda, William Robertson, Christo Wilson, "**How Tracking Companies Circumvented Ad Blockers Using WebSockets**", ACM Internet Measurement Conference (**IMC**), **2018**.
