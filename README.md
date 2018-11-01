@@ -28,7 +28,7 @@ The cookie filename is an optional JSON file, which can be extracted from `outpu
 
 # References
 
-[1] **Sajjad Arshad**, Amin Kharraz, William Robertson, "**Include Me Out: In-Browser Detection of Malicious Third-Party Content Inclusions**", International Conference on Financial Cryptography and Data Security (**FC**), **2016**.
+[1] **Sajjad Arshad**, Amin Kharraz, William Robertson, "[**Include Me Out: In-Browser Detection of Malicious Third-Party Content Inclusions**](https://sajjadium.github.io/files/fc2016excision_paper.pdf)", International Conference on Financial Cryptography and Data Security (**FC**), **2016**.
 
 [2] Muhammad Ahmad Bashir, **Sajjad Arshad**, William Robertson, Christo Wilson, "**Tracing Information Flows Between Ad Exchanges Using Retargeted Ads**", **USENIX Security** Symposium, **2016**.
 
