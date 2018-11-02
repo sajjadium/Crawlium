@@ -365,7 +365,7 @@ def get_inclusion_tree(raw_logs):
     global adblockplus_lists
     global cookies
 
-    logs = json.loads(raw_logs)
+    pages = json.loads(raw_logs)
 
     handlers = {
         'Network.webSocketCreated': handle_websocket,
@@ -389,9 +389,9 @@ def get_inclusion_tree(raw_logs):
         'Network.getAllCookies': handle_cookie
     }
 
-    website_inclusion_tree = OrderedDict([('site', logs['site']), ('urls', [])])
+    inclusions = []
 
-    for page in logs['pages']:
+    for page in pages:
         resource_requests = {}
         frame_loaders = {}
         inclusion_tree = {}
@@ -411,16 +411,16 @@ def get_inclusion_tree(raw_logs):
                 if inclusion_tree[root_doc]['url'].strip().startswith('http'):
                     json.dumps(inclusion_tree[root_doc])
                     prune_inclusion_tree(inclusion_tree[root_doc])
-                    website_inclusion_tree['urls'].append(inclusion_tree[root_doc])
+                    inclusions.append(inclusion_tree[root_doc])
             except:
                 print >> sys.stderr, traceback.format_exc()
 
-    return website_inclusion_tree
+    return inclusions
 
 if __name__ == '__main__':
     try:
-        website_inclusion_tree = get_inclusion_tree(open(sys.argv[1], 'r').read())
-        print json.dumps(website_inclusion_tree)
+        inclusions = get_inclusion_tree(open(sys.argv[1], 'r').read())
+        print json.dumps(inclusions)
     except:
         print >> sys.stderr, traceback.format_exc()
 

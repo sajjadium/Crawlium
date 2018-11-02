@@ -13,6 +13,8 @@ let COUNT = 0;
 let LANDING_DOMAIN = null;
 let COOKIE_FILENAME = null;
 let HEADLESS = false;
+let OUTPUT_LOGS_FILENAME = null;
+let OUTPUT_COOKIE_FILENAME = null;
 
 function parseArguments() {
     let parser = new ArgParse.ArgumentParser({
@@ -22,7 +24,7 @@ function parseArguments() {
     });
 
     parser.addArgument(
-      [ '-s', '--site' ],
+      '--site',
       {
         action: 'store',
         required: true,
@@ -30,7 +32,7 @@ function parseArguments() {
       }
     );
     parser.addArgument(
-      [ '-n', '--number' ],
+      '--count',
       {
         action: 'store',
         type: 'int',
@@ -39,7 +41,7 @@ function parseArguments() {
       }
     );
     parser.addArgument(
-      [ '-c', '--cookies' ],
+      '--load-cookies',
       {
         action: 'store',
         defaultValue: null,
@@ -54,14 +56,32 @@ function parseArguments() {
         help: 'Using headless mode in servers'
       }
     );
+    parser.addArgument(
+      '--output-cookies',
+      {
+        action: 'store',
+        defaultValue: null,
+        help: 'A JSON file that will contain the output cookies'
+      }
+    );
+    parser.addArgument(
+      '--output-logs',
+      {
+        action: 'store',
+        defaultValue: null,
+        help: 'A JSON file that will contain the output logs'
+      }
+    );
 
     let args = parser.parseArgs();
 
     SITE = args.site;
-    COUNT = args.number;
+    COUNT = args.count;
     LANDING_DOMAIN = SITE;
     HEADLESS = args.headless;
-    COOKIE_FILENAME = args.cookies;
+    COOKIE_FILENAME = args.load_cookies;
+    OUTPUT_COOKIE_FILENAME = args.output_cookies;
+    OUTPUT_LOGS_FILENAME = args.output_logs;
 }
 
 const DOMAINS = [
@@ -352,7 +372,8 @@ module.exports = BrowserTab;
         }
     }
 
-    console.log(JSON.stringify(result));
+    FS.writeFileSync(OUTPUT_LOGS_FILENAME, JSON.stringify(result.pages));
+    FS.writeFileSync(OUTPUT_COOKIE_FILENAME, JSON.stringify(result.cookies));
 
     await browser.close();
 })();
