@@ -21,7 +21,13 @@ npm install chrome-launcher chrome-remote-interface url-parse util tldjs path sh
 # Data Collection
 
 ``` sh
-node crawler.js --site=google.com --count=2 [--load-cookies=<JSON File Path>] [--headless] --output-logs=logs.json --output-cookies=cookies.json
+node crawler.js \
+    --site=google.com \
+    --count=2 \
+    --output-logs=logs.json \
+    --output-cookies=cookies.json \
+    [--load-cookies=<JSON File Path>] \
+    [--headless]
 ```
 
 # Extracting Inclusion Tree
