@@ -24,8 +24,6 @@ npm install chrome-launcher chrome-remote-interface url-parse util tldjs path sh
 node crawler.js --site=google.com --count=2 [--load-cookies=<JSON File Path>] [--headless] --output-logs=logs.json --output-cookies=cookies.json
 ```
 
-The cookie filename is an optional JSON file, which can be extracted from `output.logs`.
-
 # Extracting Inclusion Tree
 
 ``` sh
