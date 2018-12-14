@@ -26,6 +26,7 @@ node crawler.js \
     --count=2 \
     --output-logs=logs.json \
     --output-cookies=cookies.json \
+    [--port=<Port Number>]
     [--load-cookies=<JSON File Path>] \
     [--headless]
 ```

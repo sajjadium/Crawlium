@@ -15,6 +15,7 @@ let COOKIE_FILENAME = null;
 let HEADLESS = false;
 let OUTPUT_LOGS_FILENAME = null;
 let OUTPUT_COOKIE_FILENAME = null;
+let PORT = null;
 
 function parseArguments() {
     let parser = new ArgParse.ArgumentParser({
@@ -46,6 +47,14 @@ function parseArguments() {
         action: 'store',
         defaultValue: null,
         help: 'A JSON file that contains cookies'
+      }
+    );
+    parser.addArgument(
+      '--port',
+      {
+        action: 'store',
+        defaultValue: null,
+        help: 'Port number Chrome Debugger is listening'
       }
     );
     parser.addArgument(
@@ -82,6 +91,7 @@ function parseArguments() {
     COOKIE_FILENAME = args.load_cookies;
     OUTPUT_COOKIE_FILENAME = args.output_cookies;
     OUTPUT_LOGS_FILENAME = args.output_logs;
+    PORT = args.port;
 }
 
 const DOMAINS = [
@@ -246,30 +256,36 @@ BrowserTab.prototype.evaluateScript = async function(script, timeout=10) {
 }
 
 Browser.prototype.close = async function() {
-    try {
-        await this.browser.kill();
-    } catch (ex) {
-        console.error(ex.message, ex.stack);
+    if (PORT === null) {
+        try {
+            await this.browser.kill();
+        } catch (ex) {
+            console.error(ex.message, ex.stack);
+        }
     }
 }
 
 Browser.prototype.launch = async function() {
-    flags = [
-        '--disable-gpu',
-        '--no-sandbox',
-        '--start-maximized',
-        '--ignore-certificate-errors',
-        '--password-store=basic'
-    ];
+    if (PORT === null) {
+        flags = [
+            '--disable-gpu',
+            '--no-sandbox',
+            '--start-maximized',
+            '--ignore-certificate-errors',
+            '--password-store=basic'
+        ];
 
-    if (HEADLESS)
-        flags.push('--headless');
+        if (HEADLESS)
+            flags.push('--headless');
 
-    this.browser = await ChromeLauncher.launch({
-        chromeFlags: flags
-    });
+        this.browser = await ChromeLauncher.launch({
+            chromeFlags: flags
+        });
 
-    await sleep(10);
+        await sleep(10);
+    } else {
+        this.browser = {port: PORT};
+    }
 }
 
 Browser.prototype.openTab = async function() {
@@ -296,7 +312,7 @@ module.exports = BrowserTab;
         cookies = JSON.parse(FS.readFileSync(COOKIE_FILENAME, 'utf8'));
     }
 
-    let browser = new Browser();
+    let browser = new Browser(PORT);
 
     await browser.launch();
 
