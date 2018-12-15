@@ -151,7 +151,8 @@ const EXCLUDED_EXTENSIONS = [
     '.msi'
 ];
 
-function Browser() {
+function Browser(port) {
+    this.port = port;
 }
 
 function BrowserTab(port) {
@@ -266,7 +267,7 @@ Browser.prototype.close = async function() {
 }
 
 Browser.prototype.launch = async function() {
-    if (PORT === null) {
+    if (this.port === null) {
         flags = [
             '--disable-gpu',
             '--no-sandbox',
@@ -282,14 +283,14 @@ Browser.prototype.launch = async function() {
             chromeFlags: flags
         });
 
+        this.port = this.browser.port;
+
         await sleep(10);
-    } else {
-        this.browser = {port: PORT};
     }
 }
 
 Browser.prototype.openTab = async function() {
-    let browser_tab = new BrowserTab(this.browser.port);
+    let browser_tab = new BrowserTab(this.port);
     await browser_tab.connect();
     return browser_tab;
 }
