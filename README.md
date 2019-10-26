@@ -39,7 +39,7 @@ node crawler.js \
 
 # References
 
-[1] Muhammad Ahmad Bashir, **Sajjad Arshad**, Engin Kirda, William Robertson, Christo Wilson, "[** A Longitudinal Analysis of the ads.txt Standard**](https://sajjadium.github.io/files/imc2019adstxt_paper.pdf)", ACM Internet Measurement Conference (**IMC**), **2019**.
+[1] Muhammad Ahmad Bashir, **Sajjad Arshad**, Engin Kirda, William Robertson, Christo Wilson, "[**A Longitudinal Analysis of the ads.txt Standard**](https://sajjadium.github.io/files/imc2019adstxt_paper.pdf)", ACM Internet Measurement Conference (**IMC**), **2019**.
 
 [2] Muhammad Ahmad Bashir, **Sajjad Arshad**, Engin Kirda, William Robertson, Christo Wilson, "[**How Tracking Companies Circumvented Ad Blockers Using WebSockets**](https://sajjadium.github.io/files/imc2018websockets_paper.pdf)", ACM Internet Measurement Conference (**IMC**), **2018**.
 
