@@ -39,14 +39,16 @@ node crawler.js \
 
 # References
 
-[1] **Sajjad Arshad**, Amin Kharraz, William Robertson, "[**Include Me Out: In-Browser Detection of Malicious Third-Party Content Inclusions**](https://sajjadium.github.io/files/fc2016excision_paper.pdf)", International Conference on Financial Cryptography and Data Security (**FC**), **2016**.
+[1] Muhammad Ahmad Bashir, **Sajjad Arshad**, Engin Kirda, William Robertson, Christo Wilson, "[** A Longitudinal Analysis of the ads.txt Standard**](https://sajjadium.github.io/files/imc2019adstxt_paper.pdf)", ACM Internet Measurement Conference (**IMC**), **2019**.
 
-[2] Muhammad Ahmad Bashir, **Sajjad Arshad**, William Robertson, Christo Wilson, "[**Tracing Information Flows Between Ad Exchanges Using Retargeted Ads**](https://sajjadium.github.io/files/usenixsec2016retargetedads_paper.pdf)", **USENIX Security** Symposium, **2016**.
+[2] Muhammad Ahmad Bashir, **Sajjad Arshad**, Engin Kirda, William Robertson, Christo Wilson, "[**How Tracking Companies Circumvented Ad Blockers Using WebSockets**](https://sajjadium.github.io/files/imc2018websockets_paper.pdf)", ACM Internet Measurement Conference (**IMC**), **2018**.
 
-[3] **Sajjad Arshad**, Amin Kharraz, William Robertson, "[**Identifying Extension-based Ad Injection via Fine-grained Web Content Provenance**](https://sajjadium.github.io/files/raid2016origintracer_paper.pdf)", International Symposium on Research in Attacks, Intrusions and Defenses (**RAID**), **2016**.
+[3] Tobias Lauinger, Abdelberi Chaabane, **Sajjad Arshad**, William Robertson, Christo Wilson, Engin Kirda, "[**Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web**](https://sajjadium.github.io/files/ndss2017jslibs_paper.pdf)", Network and Distributed System Security Symposium (**NDSS**), **2017**.
 
 [4] Muhammad Ahmad Bashir, **Sajjad Arshad**, Christo Wilson, "[**Recommended For You: A First Look at Content Recommendation Networks**](https://sajjadium.github.io/files/imc2016crn_paper.pdf)", ACM Internet Measurement Conference (**IMC**), **2016**.
 
-[5] Tobias Lauinger, Abdelberi Chaabane, **Sajjad Arshad**, William Robertson, Christo Wilson, Engin Kirda, "[**Thou Shalt Not Depend on Me: Analysing the Use of Outdated JavaScript Libraries on the Web**](https://sajjadium.github.io/files/ndss2017jslibs_paper.pdf)", Network and Distributed System Security Symposium (**NDSS**), **2017**.
+[5] **Sajjad Arshad**, Amin Kharraz, William Robertson, "[**Identifying Extension-based Ad Injection via Fine-grained Web Content Provenance**](https://sajjadium.github.io/files/raid2016origintracer_paper.pdf)", International Symposium on Research in Attacks, Intrusions and Defenses (**RAID**), **2016**.
 
-[6] Muhammad Ahmad Bashir, **Sajjad Arshad**, Engin Kirda, William Robertson, Christo Wilson, "[**How Tracking Companies Circumvented Ad Blockers Using WebSockets**](https://sajjadium.github.io/files/imc2018websockets_paper.pdf)", ACM Internet Measurement Conference (**IMC**), **2018**.
+[6] Muhammad Ahmad Bashir, **Sajjad Arshad**, William Robertson, Christo Wilson, "[**Tracing Information Flows Between Ad Exchanges Using Retargeted Ads**](https://sajjadium.github.io/files/usenixsec2016retargetedads_paper.pdf)", **USENIX Security** Symposium, **2016**.
+
+[7] **Sajjad Arshad**, Amin Kharraz, William Robertson, "[**Include Me Out: In-Browser Detection of Malicious Third-Party Content Inclusions**](https://sajjadium.github.io/files/fc2016excision_paper.pdf)", International Conference on Financial Cryptography and Data Security (**FC**), **2016**.
