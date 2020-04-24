@@ -1,3 +1,5 @@
+Crawlium (DeepCrawling): A Crawling Platform Based on Chrome (Chromium).
+ 
 # Introduction
 
 A website can include resources in an HTML document from any origin so long as the inclusion respects the same origin policy, its standard exceptions, or any additional policies due to the use of **`CSP`**, **`CORS`**, or other access control framework. A first approximation to understanding the inclusions of third-party content for a given web page is to process its **`DOM tree`** while the page loads. However, direct use of a web page's DOM tree is unsatisfactory because the DOM does not in fact reliably record the inclusion relationships between resources referenced by a page. This follows from the ability for JavaScript to manipulate the DOM at run-time using the DOM API.
