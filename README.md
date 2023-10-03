@@ -1,4 +1,4 @@
-DeepCrawling: A Crawling Platform Based on Chrome (Chromium) to Generate Inclusion Trees.
+Crawlium: A Crawling Platform Based on Chrome (Chromium) to Generate Inclusion Trees.
  
 # Introduction
 
